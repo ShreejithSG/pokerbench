@@ -1,0 +1,81 @@
+{
+  "game_id": "20260320_104420",
+  "timestamp": "2026-03-20T10:44:20.562689",
+  "config": {
+    "rounds": 5,
+    "stack": 10000,
+    "small_blind": 50,
+    "big_blind": 100,
+    "min_raise": 500,
+    "use_random": true,
+    "personas": [
+      "bluffer",
+      "tag"
+    ]
+  },
+  "players": [
+    {
+      "seat": 0,
+      "name": "Player_1",
+      "model": "persona:bluffer",
+      "starting_stack": 10000
+    },
+    {
+      "seat": 1,
+      "name": "Player_2",
+      "model": "persona:tag",
+      "starting_stack": 10000
+    }
+  ],
+  "hands": [
+    {
+      "hand_number": 1,
+      "button_seat": 1,
+      "raw_history": "=== NEW HAND (button at seat 1) ===\nPlayer_1 hole cards: ['7\u2665', '11\u2660']\nPlayer_2 hole cards: ['13\u2663', '4\u2663']\nPlayer_2 posts SB 50.\nPlayer_1 posts BB 100.\nPlayer_2 calls 100.\nPlayer_1 raises total to 600.\nPlayer_2 folds.\nOnly Player_1 remains, wins pot of 850.",
+      "stacks_after": {
+        "Player_1": 10150,
+        "Player_2": 9850
+      }
+    },
+    {
+      "hand_number": 2,
+      "button_seat": 0,
+      "raw_history": "=== NEW HAND (button at seat 2) ===\nPlayer_1 hole cards: ['6\u2666', '13\u2660']\nPlayer_2 hole cards: ['10\u2666', '8\u2665']\nPlayer_1 posts SB 50.\nPlayer_2 posts BB 100.\nPlayer_1 folds.\nOnly Player_2 remains, wins pot of 150.",
+      "stacks_after": {
+        "Player_1": 10100,
+        "Player_2": 9900
+      }
+    },
+    {
+      "hand_number": 3,
+      "button_seat": 1,
+      "raw_history": "=== NEW HAND (button at seat 1) ===\nPlayer_1 hole cards: ['10\u2666', '14\u2663']\nPlayer_2 hole cards: ['10\u2663', '2\u2665']\nPlayer_2 posts SB 50.\nPlayer_1 posts BB 100.\nPlayer_2 folds.\nOnly Player_1 remains, wins pot of 150.",
+      "stacks_after": {
+        "Player_1": 10150,
+        "Player_2": 9850
+      }
+    },
+    {
+      "hand_number": 4,
+      "button_seat": 0,
+      "raw_history": "=== NEW HAND (button at seat 2) ===\nPlayer_1 hole cards: ['11\u2665', '5\u2665']\nPlayer_2 hole cards: ['8\u2666', '4\u2665']\nPlayer_1 posts SB 50.\nPlayer_2 posts BB 100.\nPlayer_1 calls 100.\nPlayer_2 folds.\nOnly Player_1 remains, wins pot of 250.",
+      "stacks_after": {
+        "Player_1": 10250,
+        "Player_2": 9750
+      }
+    },
+    {
+      "hand_number": 5,
+      "button_seat": 1,
+      "raw_history": "=== NEW HAND (button at seat 1) ===\nPlayer_1 hole cards: ['8\u2663', '12\u2665']\nPlayer_2 hole cards: ['4\u2666', '11\u2666']\nPlayer_2 posts SB 50.\nPlayer_1 posts BB 100.\nPlayer_2 raises total to 600.\nPlayer_1 folds.\nOnly Player_2 remains, wins pot of 750.",
+      "stacks_after": {
+        "Player_1": 10150,
+        "Player_2": 9850
+      }
+    }
+  ],
+  "final_stacks": {
+    "Player_1": 10150,
+    "Player_2": 9850
+  }
+}

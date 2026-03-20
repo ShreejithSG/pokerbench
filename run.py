@@ -39,7 +39,7 @@ def run_game(
 ) -> GameTrace:
     """Run a poker game and return the trace."""
     if use_random or not models:
-        if personas and len(personas) >= players:
+        if personas:
             player_list = [
                 PersonaPlayer(
                     name=f"Player_{i+1}",

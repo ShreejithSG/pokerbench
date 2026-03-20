@@ -11,8 +11,8 @@ pip install -e .
 # Run with RandomPlayer (no API needed)
 python run.py --rounds 5
 
-# Run with personas (TAG, LAG, passive, nit)
-python run.py --personas tag lag passive --rounds 10
+# Run with personas (bluffer, conservative, tag, lag, etc.)
+python run.py --personas bluffer conservative tag --rounds 10
 
 # Run with LLM players (requires API key)
 export OPENAI_API_KEY=sk-your-key
@@ -28,14 +28,22 @@ Copy `.env.example` to `.env` and set:
 
 ## Personas
 
-Opponent styles for benchmark evaluation (no API needed):
+Parameterized opponent styles (explicit, versioned). LLM agents must detect, adapt to, and exploit these. Context-aware personas adjust behavior based on game state (facing bet, pot size).
 
-| Persona | Style | Fold | Call | Raise |
-|---------|-------|------|------|-------|
-| tag | Tight-Aggressive | 30% | 25% | 45% |
-| lag | Loose-Aggressive | 8% | 22% | 70% |
-| passive | Calling station | 12% | 70% | 18% |
-| nit | Very tight | 50% | 35% | 15% |
+| Persona | Behavior | Context-aware |
+|---------|----------|---------------|
+| **tag** | Tight-Aggressive: selective, raises when in | Yes: bets when can check, folds to aggression |
+| **lag** | Loose-Aggressive: plays many hands, very aggressive | No |
+| **bluffer** | Strategic: value bets strong hands, bluffs weak only in good spots | Yes |
+| **conservative** | Folds to any bet, never bluffs | Yes |
+| **maniac** | Raises constantly, ignores pot odds | No |
+| **passive** | Calling station: calls everything, rarely raises | No |
+| **calling_station** | Extreme: almost never folds or raises | No |
+| **nit** | Very tight: folds most hands | No |
+| **rock** | Ultra-tight: only plays premiums | No |
+| **random** | Baseline: uniform fold/call/raise | No |
+
+See `docs/PERSONAS.md` for full parameterization.
 
 ## CLI
 
@@ -46,7 +54,7 @@ python run.py [OPTIONS]
   -r, --rounds N      Number of hands (default: 5)
   -s, --stack N       Starting stack per player (default: 10000)
   -m, --models ...    Model names for LLM players (e.g. gpt-4o). Omit for RandomPlayer.
-  --personas ...      Personas per seat: tag, lag, passive, nit, random
+  --personas ...      Personas per seat (e.g. bluffer conservative tag)
   --seed N            Random seed for reproducibility
   -o, --output-dir    Directory for trace JSON files (default: traces/)
 ```
@@ -68,6 +76,14 @@ python scripts/check_api.py
 ```
 
 Verifies your API key against OpenAI and/or LiteLLM proxy. Loads `.env` automatically.
+
+## Evaluation
+
+```bash
+python scripts/evaluate.py traces/
+```
+
+Reports: chips won, BB/100, adaptation score (late vs early hands). Use to compare strategic play vs random baseline.
 
 ## Output
 
