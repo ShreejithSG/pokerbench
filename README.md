@@ -71,6 +71,5 @@ Verifies your API key against OpenAI and/or LiteLLM proxy. Loads `.env` automati
 
 ## Output
 
-- **Game traces**: JSON in `traces/` (hand history, stacks, config)
-- **Benchmark summary**: `benchmark_results/benchmark_summary.json` (aggregated winner counts)
-- **Samples**: See `samples/` for example outputs
+- **`traces/`** – Game traces from `run.py` (hand history, stacks, config)
+- **`test_results/`** – Benchmark results with behavioral stats and adaptation curves

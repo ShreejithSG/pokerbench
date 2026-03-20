@@ -1,10 +1,8 @@
-# Sample Outputs
+# Experiment Outputs
 
-Example game traces and benchmark results from PokerBench.
+Real experiment data from PokerBench runs:
 
-- `game_persona_demo.json` – Example game with TAG/LAG/Passive personas
-- `benchmark_summary.json` – Aggregated results from `scripts/run_benchmark.py`
+- **`traces/`** – Game traces (hand history, stacks, config) from `run.py`
+- **`test_results/`** – Benchmark results (e.g. `test_match_v1.json` with behavioral stats, adaptation curves)
 
-Generate new outputs:
-- `python run.py --personas tag lag passive --rounds 10`
-- `python scripts/run_benchmark.py --games 5 --personas tag lag passive`
+These are committed to show completed experiments.

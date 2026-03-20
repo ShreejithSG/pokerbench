@@ -1,0 +1,59 @@
+{
+  "game_id": "20260223_152941",
+  "timestamp": "2026-02-23T15:29:41.947901",
+  "config": {
+    "rounds": 5,
+    "stack": 10000,
+    "small_blind": 50,
+    "big_blind": 100,
+    "min_raise": 500,
+    "use_random": true
+  },
+  "players": [
+    {
+      "seat": 0,
+      "name": "Player_1",
+      "model": "random",
+      "starting_stack": 10000
+    },
+    {
+      "seat": 1,
+      "name": "Player_2",
+      "model": "random",
+      "starting_stack": 10000
+    },
+    {
+      "seat": 2,
+      "name": "Player_3",
+      "model": "random",
+      "starting_stack": 10000
+    }
+  ],
+  "hands": [
+    {
+      "hand_number": 1,
+      "button_seat": 1,
+      "raw_history": "=== NEW HAND (button at seat 1) ===\nPlayer_1 hole cards: ['7\u2663', '8\u2660']\nPlayer_2 hole cards: ['13\u2666', '4\u2660']\nPlayer_3 hole cards: ['3\u2666', '5\u2660']\nPlayer_2 posts SB 50.\nPlayer_3 posts BB 100.\nPlayer_1 calls 100.\nPlayer_2 folds.\nPlayer_3 calls 100.\nFLOP: ['10\u2663', '10\u2665', '2\u2666']\nPlayer_1 calls 100.\nPlayer_3 calls 100.\nTURN: ['12\u2660']\nPlayer_1 calls 100.\nPlayer_3 calls 100.\nRIVER: ['10\u2666']\nPlayer_1 calls 100.\nPlayer_3 raises total to 600.\nPlayer_1 calls 600.\nPlayer_3 calls 600.\nAt showdown, Player_1 hole cards: ['7\u2663', '8\u2660']\nAt showdown, Player_3 hole cards: ['3\u2666', '5\u2660']\nShowdown: Player_1 wins pot of 2650.",
+      "stacks_after": {
+        "Player_1": 11650,
+        "Player_2": 9950,
+        "Player_3": 8400
+      }
+    },
+    {
+      "hand_number": 2,
+      "button_seat": 2,
+      "raw_history": "=== NEW HAND (button at seat 2) ===\nPlayer_1 hole cards: ['7\u2663', '8\u2665']\nPlayer_2 hole cards: ['10\u2660', '13\u2665']\nPlayer_3 hole cards: ['10\u2663', '11\u2660']\nPlayer_3 posts SB 50.\nPlayer_1 posts BB 100.\nPlayer_2 raises total to 600.\nPlayer_3 raises total to 1100.\nPlayer_1 raises total to 1600.\nPlayer_2 calls 1600.\nPlayer_3 calls 1600.\nPlayer_1 calls 1600.\nFLOP: ['3\u2666', '3\u2663', '13\u2663']\nPlayer_2 raises total to 600.\nPlayer_3 calls 600.\nPlayer_1 calls 600.\nPlayer_2 calls 600.\nTURN: ['12\u2663']\nPlayer_2 calls 100.\nPlayer_3 raises total to 600.\nPlayer_1 raises total to 1100.\nPlayer_2 raises total to 1600.\nPlayer_3 calls 1600.\nPlayer_1 raises total to 2100.\nPlayer_2 raises total to 2600.\nPlayer_3 folds.\nPlayer_1 raises total to 3100.\nPlayer_2 tries raising to 3600 but lacks chips => folds.\nOnly Player_1 remains, wins pot of 23450.",
+      "stacks_after": {
+        "Player_1": 24900,
+        "Player_2": 2250,
+        "Player_3": 2850
+      }
+    }
+  ],
+  "final_stacks": {
+    "Player_1": 24900,
+    "Player_2": 2250,
+    "Player_3": 2850
+  }
+}

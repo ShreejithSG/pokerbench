@@ -1,0 +1,3705 @@
+{
+  "match_id": "test_match_v1",
+  "agents": [
+    "RandomBot",
+    "TAG_Bot"
+  ],
+  "seed": 42,
+  "seating": 0,
+  "start_time": "2026-01-31T06:21:26.665831",
+  "end_time": "2026-01-31T06:21:26.673421",
+  "total_hands": 50,
+  "results": {
+    "RandomBot": {
+      "final_stack": 0,
+      "net_bb": -100,
+      "bb_per_100": -200.0
+    },
+    "TAG_Bot": {
+      "final_stack": 200,
+      "net_bb": 100,
+      "bb_per_100": 200.0
+    }
+  },
+  "behavioral_stats": {
+    "RandomBot": {
+      "vpip": 0.48,
+      "pfr": 0.12,
+      "aggression_factor": 0.13793103448275862,
+      "wtsd": 0.0,
+      "hands_played": 50,
+      "voluntary_puts": 24,
+      "preflop_raises": 6,
+      "bets_and_raises": 12,
+      "calls": 87,
+      "showdowns": 0,
+      "showdown_opportunities": 1
+    },
+    "TAG_Bot": {
+      "vpip": 0.34,
+      "pfr": 0.34,
+      "aggression_factor": 10.333333333333334,
+      "wtsd": 1.0,
+      "hands_played": 50,
+      "voluntary_puts": 17,
+      "preflop_raises": 17,
+      "bets_and_raises": 31,
+      "calls": 3,
+      "showdowns": 1,
+      "showdown_opportunities": 1
+    }
+  },
+  "adaptation_curves": {
+    "RandomBot": [
+      {
+        "start_hand": 1,
+        "end_hand": 10,
+        "bb_per_100": -810.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 11,
+        "end_hand": 20,
+        "bb_per_100": -80.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 21,
+        "end_hand": 30,
+        "bb_per_100": 80.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 31,
+        "end_hand": 40,
+        "bb_per_100": 50.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 41,
+        "end_hand": 50,
+        "bb_per_100": 50.0,
+        "hands_count": 10
+      }
+    ],
+    "TAG_Bot": [
+      {
+        "start_hand": 1,
+        "end_hand": 10,
+        "bb_per_100": 950.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 11,
+        "end_hand": 20,
+        "bb_per_100": 240.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 21,
+        "end_hand": 30,
+        "bb_per_100": 80.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 31,
+        "end_hand": 40,
+        "bb_per_100": 100.0,
+        "hands_count": 10
+      },
+      {
+        "start_hand": 41,
+        "end_hand": 50,
+        "bb_per_100": 110.00000000000001,
+        "hands_count": 10
+      }
+    ]
+  },
+  "errors": {
+    "RandomBot": 0,
+    "TAG_Bot": 0
+  },
+  "total_tokens": {
+    "RandomBot": 0,
+    "TAG_Bot": 0
+  },
+  "total_cost_usd": {
+    "RandomBot": 0.0,
+    "TAG_Bot": 0.0
+  },
+  "hands": [
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 1,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.667841",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 99,
+          "stack_end": 104,
+          "hole_cards": [
+            "Qh",
+            "9c"
+          ],
+          "profit_bb": 5
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 99,
+          "stack_end": 95,
+          "hole_cards": [
+            "8h",
+            "Ac"
+          ],
+          "profit_bb": -4
+        }
+      },
+      "board": [],
+      "pot": 15,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "raise",
+          "amount": 4,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "raise",
+          "amount": 16,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 6 below min 7"
+      ]
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 2,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668040",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 103,
+          "stack_end": 108,
+          "hole_cards": [
+            "Jh",
+            "4c"
+          ],
+          "profit_bb": 5
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 95,
+          "stack_end": 91,
+          "hole_cards": [
+            "Jc",
+            "Qh"
+          ],
+          "profit_bb": -4
+        }
+      },
+      "board": [],
+      "pot": 21,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "raise",
+          "amount": 32,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 3,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668146",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 108,
+          "stack_end": 102,
+          "hole_cards": [
+            "8d",
+            "Kc"
+          ],
+          "profit_bb": -6
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 90,
+          "stack_end": 98,
+          "hole_cards": [
+            "4c",
+            "Qc"
+          ],
+          "profit_bb": 8
+        }
+      },
+      "board": [],
+      "pot": 22,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "raise",
+          "amount": 12,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 30,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 4,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668212",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 101,
+          "stack_end": 102,
+          "hole_cards": [
+            "2d",
+            "7s"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 97,
+          "stack_end": 97,
+          "hole_cards": [
+            "Kh",
+            "Jh"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 5,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668348",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 102,
+          "stack_end": 32,
+          "hole_cards": [
+            "7d",
+            "7h"
+          ],
+          "profit_bb": -70
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 96,
+          "stack_end": 167,
+          "hole_cards": [
+            "4h",
+            "9d"
+          ],
+          "profit_bb": 71
+        }
+      },
+      "board": [
+        "Js",
+        "8c",
+        "9s",
+        "Qc"
+      ],
+      "pot": 167,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "flop",
+          "seat": 0,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "flop",
+          "seat": 1,
+          "action": "bet",
+          "amount": 2,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 1,
+          "action": "bet",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 0,
+          "action": "raise",
+          "amount": 12,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 1,
+          "action": "raise",
+          "amount": 24,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 0,
+          "action": "raise",
+          "amount": 124,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 1,
+          "action": "raise",
+          "amount": 160,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 160 below min 230",
+        "Seat 0 exception: empty range in randrange(108, 33)"
+      ]
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 6,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668419",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 31,
+          "stack_end": 33,
+          "hole_cards": [
+            "6h",
+            "Qd"
+          ],
+          "profit_bb": 2
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 167,
+          "stack_end": 167,
+          "hole_cards": [
+            "4s",
+            "Tc"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 7,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668512",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 32,
+          "stack_end": 46,
+          "hole_cards": [
+            "4d",
+            "3s"
+          ],
+          "profit_bb": 14
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 166,
+          "stack_end": 154,
+          "hole_cards": [
+            "5c",
+            "4h"
+          ],
+          "profit_bb": -12
+        }
+      },
+      "board": [],
+      "pot": 38,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "bet",
+          "amount": 8,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 24,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "raise",
+          "amount": 40,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 8,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668575",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 45,
+          "stack_end": 46,
+          "hole_cards": [
+            "2s",
+            "2h"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 153,
+          "stack_end": 153,
+          "hole_cards": [
+            "8h",
+            "8s"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 9,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668700",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 46,
+          "stack_end": 12,
+          "hole_cards": [
+            "Ks",
+            "7c"
+          ],
+          "profit_bb": -34
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 152,
+          "stack_end": 188,
+          "hole_cards": [
+            "Jd",
+            "Js"
+          ],
+          "profit_bb": 36
+        }
+      },
+      "board": [
+        "Ah",
+        "5d",
+        "Ts",
+        "9s",
+        "Td"
+      ],
+      "pot": 124,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "bet",
+          "amount": 20,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 60,
+          "latency_ms": null
+        },
+        {
+          "street": "flop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "flop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 0,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "turn",
+          "seat": 0,
+          "action": "bet",
+          "amount": 2,
+          "latency_ms": null
+        },
+        {
+          "street": "river",
+          "seat": 1,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "river",
+          "seat": 1,
+          "action": "bet",
+          "amount": 110,
+          "latency_ms": null
+        },
+        {
+          "street": "river",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": true,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 10,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.668781",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 11,
+          "stack_end": 12,
+          "hole_cards": [
+            "7c",
+            "7h"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 187,
+          "stack_end": 187,
+          "hole_cards": [
+            "5c",
+            "4c"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 11,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669093",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 12,
+          "stack_end": 12,
+          "hole_cards": [
+            "Ah",
+            "3d"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 186,
+          "stack_end": 188,
+          "hole_cards": [
+            "3s",
+            "7c"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 12,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669171",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 11,
+          "stack_end": 12,
+          "hole_cards": [
+            "9d",
+            "Ah"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 187,
+          "stack_end": 187,
+          "hole_cards": [
+            "5c",
+            "4d"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 13,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669350",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 12,
+          "stack_end": 0,
+          "hole_cards": [
+            "Th",
+            "Qd"
+          ],
+          "profit_bb": -12
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 186,
+          "stack_end": 200,
+          "hole_cards": [
+            "Ad",
+            "2d"
+          ],
+          "profit_bb": 14
+        }
+      },
+      "board": [],
+      "pot": 28,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "raise",
+          "amount": 12,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 30,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 14,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669457",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Kd",
+            "3s"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "6d",
+            "9d"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 15,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669531",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "6h",
+            "Qh"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "7h",
+            "Qs"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 16,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669588",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Ks",
+            "4s"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "3s",
+            "6d"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 17,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669650",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "Ah",
+            "Jh"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "2d",
+            "4c"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 18,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669701",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "2c",
+            "Qs"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "9c",
+            "4d"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 19,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.669792",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "3d",
+            "9d"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "9h",
+            "3s"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 20,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670113",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": -1,
+          "hole_cards": [
+            "9d",
+            "4s"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 201,
+          "hole_cards": [
+            "Kc",
+            "Tc"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 4,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 21,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670264",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -2,
+          "stack_end": 0,
+          "hole_cards": [
+            "Kh",
+            "9h"
+          ],
+          "profit_bb": 2
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 200,
+          "stack_end": 200,
+          "hole_cards": [
+            "4h",
+            "Qc"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 9,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 6 below min 12"
+      ]
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 22,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670389",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Kd",
+            "4c"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 200,
+          "hole_cards": [
+            "Ts",
+            "4s"
+          ],
+          "profit_bb": 1
+        }
+      },
+      "board": [],
+      "pot": 9,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 6 below min 11"
+      ]
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 23,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670551",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Tc",
+            "7h"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 200,
+          "hole_cards": [
+            "Kc",
+            "Js"
+          ],
+          "profit_bb": 1
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 24,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670621",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Kh",
+            "8s"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "9s",
+            "Ad"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 25,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670711",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "2c",
+            "5d"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "Kc",
+            "Jh"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 10,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 6 below min 12"
+      ]
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 26,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670772",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Qs",
+            "6s"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "4d",
+            "9h"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 27,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670898",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "5h",
+            "3d"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "9s",
+            "6h"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 46,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 6 below min 12",
+        "Seat 1 invalid action: Raise 6 below min 24",
+        "Seat 1 invalid action: Raise 6 below min 48"
+      ]
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 28,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.670967",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "5c",
+            "2c"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "7c",
+            "2s"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 29,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671014",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "8s",
+            "3s"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "7d",
+            "Td"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 30,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671060",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Qh",
+            "Ac"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "7d",
+            "4c"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 31,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671175",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "6c",
+            "3h"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "9c",
+            "5h"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 32,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671235",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Qs",
+            "As"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "Qc",
+            "2c"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 33,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671312",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "Qd",
+            "Kh"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "6s",
+            "Jc"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 34,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671365",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Jd",
+            "As"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "7h",
+            "Qs"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 35,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671410",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "3d",
+            "5c"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "9d",
+            "2h"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 36,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671453",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Ks",
+            "6c"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "4h",
+            "Jh"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 37,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671588",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "6d",
+            "6s"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "5c",
+            "6c"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 10,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 6 below min 12"
+      ]
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 38,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671659",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Jh",
+            "7s"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "Ts",
+            "Tc"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 39,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671752",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "As",
+            "5s"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "6h",
+            "3s"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 4,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 40,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671813",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "8d",
+            "6c"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "4h",
+            "As"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 41,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671865",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "4c",
+            "Tc"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "Jc",
+            "Qd"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 42,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.671910",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "4h",
+            "5d"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "As",
+            "Jc"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 43,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672007",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "Kc",
+            "6c"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "9h",
+            "9c"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 4,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 44,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672068",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Qs",
+            "Jh"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "Th",
+            "9h"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 45,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672142",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "Jh",
+            "8c"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "As",
+            "Ac"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 4,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 46,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672197",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Kh",
+            "9s"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "8c",
+            "3h"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 47,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672251",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "5h",
+            "3s"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "3c",
+            "Ad"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 48,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672298",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "Tc",
+            "5d"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 199,
+          "hole_cards": [
+            "8s",
+            "Ks"
+          ],
+          "profit_bb": 0
+        }
+      },
+      "board": [],
+      "pot": 1,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 0,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 49,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672390",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": 0,
+          "stack_end": 0,
+          "hole_cards": [
+            "Ah",
+            "3c"
+          ],
+          "profit_bb": 0
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 198,
+          "stack_end": 200,
+          "hole_cards": [
+            "3s",
+            "7s"
+          ],
+          "profit_bb": 2
+        }
+      },
+      "board": [],
+      "pot": 4,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": []
+    },
+    {
+      "match_id": "test_match_v1",
+      "hand_id": 50,
+      "seed": 42,
+      "timestamp": "2026-01-31T06:21:26.672514",
+      "players": {
+        "seat_0": {
+          "agent": "RandomBot",
+          "stack_start": -1,
+          "stack_end": 0,
+          "hole_cards": [
+            "9s",
+            "Kh"
+          ],
+          "profit_bb": 1
+        },
+        "seat_1": {
+          "agent": "TAG_Bot",
+          "stack_start": 199,
+          "stack_end": 200,
+          "hole_cards": [
+            "8s",
+            "4s"
+          ],
+          "profit_bb": 1
+        }
+      },
+      "board": [],
+      "pot": 20,
+      "actions": [
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "raise",
+          "amount": 6,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "call",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 1,
+          "action": "check",
+          "amount": 0,
+          "latency_ms": null
+        },
+        {
+          "street": "preflop",
+          "seat": 0,
+          "action": "fold",
+          "amount": 0,
+          "latency_ms": null
+        }
+      ],
+      "winner_seat": 1,
+      "showdown": false,
+      "errors": [
+        "Seat 1 invalid action: Raise 6 below min 11",
+        "Seat 1 invalid action: Raise 6 below min 22"
+      ]
+    }
+  ]
+}

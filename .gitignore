@@ -18,9 +18,7 @@ dist/
 *.swp
 *.swo
 
-# Outputs
-traces/
-test_results/
+# Outputs (keep traces/ and test_results/ for handover - real experiment data)
 samples/traces/
 benchmark_results/
 *.log
