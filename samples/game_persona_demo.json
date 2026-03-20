@@ -1,0 +1,55 @@
+{
+  "game_id": "20260320_persona_demo",
+  "timestamp": "2026-03-20T10:30:00.000000",
+  "config": {
+    "rounds": 5,
+    "stack": 10000,
+    "small_blind": 50,
+    "big_blind": 100,
+    "min_raise": 500,
+    "use_random": true,
+    "personas": ["tag", "lag", "passive"]
+  },
+  "players": [
+    {"seat": 0, "name": "TAG_Bot", "model": "persona:tag", "starting_stack": 10000},
+    {"seat": 1, "name": "LAG_Bot", "model": "persona:lag", "starting_stack": 10000},
+    {"seat": 2, "name": "Passive_Bot", "model": "persona:passive", "starting_stack": 10000}
+  ],
+  "hands": [
+    {
+      "hand_number": 1,
+      "button_seat": 0,
+      "raw_history": "=== NEW HAND (button at seat 0) ===\nTAG_Bot hole cards: ['14♠', '13♥']\nLAG_Bot hole cards: ['8♦', '7♣']\nPassive_Bot hole cards: ['5♥', '4♠']\nLAG_Bot posts SB 50.\nPassive_Bot posts BB 100.\nTAG_Bot raises total to 600.\nLAG_Bot folds.\nPassive_Bot calls 500.\nTAG_Bot bets 500.\nPassive_Bot calls 500.\nTAG_Bot bets 1000.\nPassive_Bot folds.\nTAG_Bot wins pot of 3200.",
+      "stacks_after": {"TAG_Bot": 11600, "LAG_Bot": 9950, "Passive_Bot": 8450}
+    },
+    {
+      "hand_number": 2,
+      "button_seat": 1,
+      "raw_history": "=== NEW HAND (button at seat 1) ===\nLAG_Bot hole cards: ['12♣', '12♦']\nPassive_Bot hole cards: ['9♥', '9♦']\nTAG_Bot hole cards: ['6♠', '5♣']\nPassive_Bot posts SB 50.\nTAG_Bot posts BB 100.\nLAG_Bot raises total to 600.\nPassive_Bot calls 550.\nTAG_Bot folds.\nLAG_Bot bets 1000.\nPassive_Bot calls 1000.\nLAG_Bot bets 2000.\nPassive_Bot folds.\nLAG_Bot wins pot of 5300.",
+      "stacks_after": {"TAG_Bot": 11500, "LAG_Bot": 12250, "Passive_Bot": 6250}
+    },
+    {
+      "hand_number": 3,
+      "button_seat": 2,
+      "raw_history": "=== NEW HAND (button at seat 2) ===\nPassive_Bot hole cards: ['14♥', '14♦']\nTAG_Bot hole cards: ['11♠', '11♣']\nLAG_Bot hole cards: ['3♦', '2♥']\nTAG_Bot posts SB 50.\nLAG_Bot posts BB 100.\nPassive_Bot raises total to 600.\nTAG_Bot calls 550.\nLAG_Bot folds.\nPassive_Bot bets 500.\nTAG_Bot calls 500.\nPassive_Bot bets 1000.\nTAG_Bot folds.\nPassive_Bot wins pot of 2800.",
+      "stacks_after": {"TAG_Bot": 10950, "LAG_Bot": 12150, "Passive_Bot": 7900}
+    },
+    {
+      "hand_number": 4,
+      "button_seat": 0,
+      "raw_history": "=== NEW HAND (button at seat 0) ===\nTAG_Bot hole cards: ['14♣', '13♠']\nLAG_Bot hole cards: ['10♥', '10♦']\nPassive_Bot hole cards: ['7♠', '6♦']\nLAG_Bot posts SB 50.\nPassive_Bot posts BB 100.\nTAG_Bot raises total to 600.\nLAG_Bot calls 550.\nPassive_Bot folds.\nTAG_Bot bets 1000.\nLAG_Bot raises total to 2600.\nTAG_Bot calls 1600.\nTAG_Bot bets 2000.\nLAG_Bot calls 2000.\nShowdown: TAG_Bot 14♣13♠ vs LAG_Bot 10♥10♦. TAG_Bot wins with pair of 14s. Pot: 9200.",
+      "stacks_after": {"TAG_Bot": 14150, "LAG_Bot": 8900, "Passive_Bot": 7950}
+    },
+    {
+      "hand_number": 5,
+      "button_seat": 1,
+      "raw_history": "=== NEW HAND (button at seat 1) ===\nLAG_Bot hole cards: ['9♣', '8♣']\nPassive_Bot hole cards: ['12♥', '4♠']\nTAG_Bot hole cards: ['13♦', '5♥']\nPassive_Bot posts SB 50.\nTAG_Bot posts BB 100.\nLAG_Bot raises total to 600.\nPassive_Bot folds.\nTAG_Bot folds.\nLAG_Bot wins pot of 250.",
+      "stacks_after": {"TAG_Bot": 14050, "LAG_Bot": 9150, "Passive_Bot": 7900}
+    }
+  ],
+  "final_stacks": {
+    "TAG_Bot": 14050,
+    "LAG_Bot": 9150,
+    "Passive_Bot": 7900
+  }
+}

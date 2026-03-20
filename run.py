@@ -17,6 +17,7 @@ from pathlib import Path
 from llm_poker.environment import PokerTable
 from llm_poker.llm_player import LLMPlayer
 
+from pokerbench.personas import PersonaPlayer, get_persona_names
 from pokerbench.random_player import RandomPlayer
 from pokerbench.tracing import GameTrace, HandTrace, save_trace
 
@@ -30,16 +31,31 @@ def run_game(
     min_raise: int = 500,
     use_random: bool = True,
     models: list[str] | None = None,
+    personas: list[str] | None = None,
     seed: int | None = None,
     output_dir: Path = Path("traces"),
+    quiet: bool = False,
+    game_id: str | None = None,
 ) -> GameTrace:
     """Run a poker game and return the trace."""
     if use_random or not models:
-        player_list = [
-            RandomPlayer(name=f"Player_{i+1}", stack=stack, seed=seed)
-            for i in range(players)
-        ]
-        model_ids = ["random"] * players
+        if personas and len(personas) >= players:
+            player_list = [
+                PersonaPlayer(
+                    name=f"Player_{i+1}",
+                    persona=personas[i % len(personas)],
+                    stack=stack,
+                    seed=seed,
+                )
+                for i in range(players)
+            ]
+            model_ids = [f"persona:{personas[i % len(personas)]}" for i in range(players)]
+        else:
+            player_list = [
+                RandomPlayer(name=f"Player_{i+1}", stack=stack, seed=seed)
+                for i in range(players)
+            ]
+            model_ids = ["random"] * players
     else:
         player_list = [
             LLMPlayer(name=f"Player_{i+1}", model_id=models[i % len(models)], stack=stack)
@@ -54,7 +70,7 @@ def run_game(
         big_blind=big_blind,
     )
 
-    game_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    game_id = game_id or datetime.now().strftime("%Y%m%d_%H%M%S")
     hand_traces: list[HandTrace] = []
 
     for r in range(rounds):
@@ -73,7 +89,8 @@ def run_game(
                 stacks_after=stacks_after,
             )
         )
-        print(history, "\n----- END HAND -----\n")
+        if not quiet:
+            print(history, "\n----- END HAND -----\n")
         table.remove_busted()
 
     final_stacks = {p.name: p.stack for p in player_list}
@@ -87,6 +104,7 @@ def run_game(
             "big_blind": big_blind,
             "min_raise": min_raise,
             "use_random": use_random,
+            "personas": personas,
         },
         players=[
             {"seat": i, "name": p.name, "model": model_ids[i], "starting_stack": stack}
@@ -97,12 +115,12 @@ def run_game(
     )
 
     path = save_trace(trace, output_dir)
-    print(f"\nTrace saved to {path}")
-
-    ranking = sorted(player_list, key=lambda x: x.stack, reverse=True)
-    print("\n=== FINAL STANDINGS ===")
-    for i, p in enumerate(ranking, start=1):
-        print(f"  {i}. {p.name}: {p.stack} chips")
+    if not quiet:
+        print(f"\nTrace saved to {path}")
+        ranking = sorted(player_list, key=lambda x: x.stack, reverse=True)
+        print("\n=== FINAL STANDINGS ===")
+        for i, p in enumerate(ranking, start=1):
+            print(f"  {i}. {p.name}: {p.stack} chips")
 
     return trace
 
@@ -120,6 +138,12 @@ def main():
         nargs="+",
         help="Model names for LLM players (e.g. gpt-4o). If omitted, uses RandomPlayer (no API).",
     )
+    parser.add_argument(
+        "--personas",
+        nargs="+",
+        choices=get_persona_names(),
+        help="Persona per seat: tag, lag, passive, nit, random. E.g. --personas tag lag passive",
+    )
     parser.add_argument("--seed", type=int, default=None, help="Random seed for reproducibility")
     parser.add_argument(
         "--output-dir",
@@ -132,7 +156,10 @@ def main():
 
     use_random = not args.models
     if use_random:
-        print("Using RandomPlayer (no API needed). Use --models gpt-4o for LLM play.\n")
+        if args.personas:
+            print(f"Using PersonaPlayer: {args.personas}\n")
+        else:
+            print("Using RandomPlayer (no API needed). Use --models gpt-4o for LLM play.\n")
 
     if args.players < 2:
         parser.error("--players must be at least 2")
@@ -147,6 +174,7 @@ def main():
         big_blind=args.big_blind,
         use_random=use_random,
         models=args.models,
+        personas=args.personas,
         seed=args.seed,
         output_dir=args.output_dir,
     )

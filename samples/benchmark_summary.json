@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "20260320_103500",
+  "config": {
+    "games": 2,
+    "rounds_per_game": 3,
+    "players": 3,
+    "personas": [
+      "tag",
+      "lag"
+    ],
+    "seed": null
+  },
+  "results": [
+    {
+      "game_id": "20260320_103500_g0",
+      "winner": "Player_2",
+      "final_stacks": {
+        "Player_1": 150,
+        "Player_2": 20600,
+        "Player_3": 9250
+      },
+      "hands_played": 3
+    },
+    {
+      "game_id": "20260320_103500_g1",
+      "winner": "Player_1",
+      "final_stacks": {
+        "Player_1": 22700,
+        "Player_2": 3350,
+        "Player_3": 3950
+      },
+      "hands_played": 3
+    }
+  ],
+  "winner_counts": {
+    "Player_2": 1,
+    "Player_1": 1
+  }
+}

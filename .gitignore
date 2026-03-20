@@ -21,4 +21,6 @@ dist/
 # Outputs
 traces/
 test_results/
+samples/traces/
+benchmark_results/
 *.log
