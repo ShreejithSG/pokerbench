@@ -1,0 +1,8 @@
+"""PokerBench: LLM strategic reasoning benchmark via Texas Hold'em."""
+
+__version__ = "0.2.0"
+
+from pokerbench.random_player import RandomPlayer
+from pokerbench.tracing import GameTrace, HandTrace, save_trace
+
+__all__ = ["RandomPlayer", "GameTrace", "HandTrace", "save_trace"]

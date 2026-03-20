@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pokerbench"
+version = "0.2.0"
+description = "Benchmark for evaluating LLM strategic reasoning via Texas Hold'em"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Scale AI", email = "shreejith.suthraye@contractors.scale.com"}
+]
+keywords = ["poker", "llm", "benchmark", "evaluation", "agents"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "llm-poker>=0.1.14",
+    "openai>=1.0",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pokerbench*"]
+
+[project.scripts]
+pokerbench = "run:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
