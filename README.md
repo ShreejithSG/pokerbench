@@ -42,8 +42,13 @@ Parameterized opponent styles (explicit, versioned). LLM agents must detect, ada
 | **nit** | Very tight: folds most hands | No |
 | **rock** | Ultra-tight: only plays premiums | No |
 | **random** | Baseline: uniform fold/call/raise | No |
+| **tilt** | Nonstationary: looser when losing chips (adaptation test) | Yes (stack vs start) |
 
 See `docs/PERSONAS.md` for full parameterization.
+
+**Nonstationarity:** `tilt` persona increases aggression when the stack is down vs starting stack (proposal: behavioral drift).
+
+**Proposal alignment:** `docs/PROPOSAL_ALIGNMENT.md` maps Robert’s benchmark doc to what’s implemented vs roadmap.
 
 ## CLI
 

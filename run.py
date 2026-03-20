@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
 import argparse
+import random
 from datetime import datetime
 from pathlib import Path
 
@@ -38,6 +39,9 @@ def run_game(
     game_id: str | None = None,
 ) -> GameTrace:
     """Run a poker game and return the trace."""
+    if seed is not None:
+        random.seed(seed)
+
     if use_random or not models:
         if personas:
             player_list = [

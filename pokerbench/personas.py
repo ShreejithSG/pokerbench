@@ -89,6 +89,12 @@ PERSONA_SPECS: dict[str, PersonaSpec] = {
         base_weights=(0.15, 0.45, 0.40),
         context_adjuster=None,
     ),
+    "tilt": PersonaSpec(
+        name="tilt",
+        description="Nonstationary: tight baseline, becomes looser and more aggressive when down chips (tilt)",
+        base_weights=(0.35, 0.35, 0.30),
+        context_adjuster="tilt",
+    ),
 }
 
 
@@ -172,6 +178,30 @@ def _adjust_tight_aggressive(
     return [fold * 1.3, call * 0.9, raise_w * 0.5]
 
 
+def _adjust_tilt(
+    base: list[float],
+    community_cards: List,
+    pot: int,
+    call_amount: int,
+    hole_cards: Optional[List[str]] = None,
+    stack: int = 10000,
+    starting_stack: int = 10000,
+) -> list[float]:
+    """
+    Nonstationary behavior: when stack drops vs session start, increase aggression
+    (proposal: controlled behavioral drift for adaptation measurement).
+    """
+    fold, call, raise_w = base[0], base[1], base[2]
+    if starting_stack <= 0:
+        return base
+    loss_frac = 1.0 - (stack / starting_stack)
+    if loss_frac <= 0.05:
+        return base
+    # Tilt: less folding, more calling and raising as losses mount (capped)
+    t = min(0.6, loss_frac * 1.5)
+    return [fold * (1 - 0.4 * t), call * (1 + 0.35 * t), raise_w * (1 + 0.5 * t)]
+
+
 def _get_context_weights(
     persona: str,
     base_weights: tuple[float, float, float],
@@ -179,6 +209,8 @@ def _get_context_weights(
     pot: int,
     call_amount: int,
     hole_cards: Optional[List[str]] = None,
+    stack: int = 10000,
+    starting_stack: int = 10000,
 ) -> list[float]:
     """Apply context adjustment and return (fold, call, raise) weights."""
     base = list(base_weights)
@@ -186,13 +218,17 @@ def _get_context_weights(
     if not spec or not spec.context_adjuster:
         return base
     adj = spec.context_adjuster
-    kwargs = {"hole_cards": hole_cards}
     if adj == "bluffer":
-        return _adjust_bluffer(base, community_cards, pot, call_amount, **kwargs)
+        return _adjust_bluffer(base, community_cards, pot, call_amount, hole_cards=hole_cards)
     if adj == "conservative":
-        return _adjust_conservative(base, community_cards, pot, call_amount, **kwargs)
+        return _adjust_conservative(base, community_cards, pot, call_amount, hole_cards=hole_cards)
     if adj == "tight_aggressive":
-        return _adjust_tight_aggressive(base, community_cards, pot, call_amount, **kwargs)
+        return _adjust_tight_aggressive(base, community_cards, pot, call_amount, hole_cards=hole_cards)
+    if adj == "tilt":
+        return _adjust_tilt(
+            base, community_cards, pot, call_amount,
+            hole_cards=hole_cards, stack=stack, starting_stack=starting_stack,
+        )
     return base
 
 
@@ -213,6 +249,7 @@ class PersonaPlayer(Player):
         self.persona = persona.lower()
         spec = PERSONA_SPECS.get(self.persona, PERSONA_SPECS["random"])
         self._base_weights = spec.base_weights
+        self._starting_stack = stack
         self.model_id = f"persona:{persona}"
         self._rng = random.Random(seed)
 
@@ -231,6 +268,8 @@ class PersonaPlayer(Player):
             pot,
             call_amount,
             hole_cards=getattr(self, "hole_cards", None) or [],
+            stack=self.stack,
+            starting_stack=self._starting_stack,
         )
         # Normalize (avoid zeros)
         total = sum(weights)
