@@ -35,7 +35,7 @@ def try_proxy(base_url: str, use_x_header: bool = False) -> tuple[bool | None, s
         if use_x_header:
             kwargs["default_headers"] = {"x-litellm-api-key": API_KEY}
         client = OpenAI(**kwargs)
-        r = client.chat.completions.create(
+        client.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": "Say ok"}],
             max_tokens=5,
@@ -52,12 +52,12 @@ def try_openai_default():
     try:
         from openai import OpenAI
         client = OpenAI(api_key=API_KEY)
-        r = client.chat.completions.create(
+        resp = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": "Say ok"}],
             max_tokens=5,
         )
-        return True, f"OpenAI default: OK (model: {r.model})"
+        return True, f"OpenAI default: OK (model: {resp.model})"
     except Exception as e:
         return False, f"OpenAI default: {e}"
 

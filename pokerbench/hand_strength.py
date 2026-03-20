@@ -84,11 +84,9 @@ def postflop_strength(hole: list[tuple[int, str]], board: list[tuple[int, str]])
         return 0.5
     all_cards = hole + board
     ranks = [c[0] for c in all_cards]
-    suits = [c[1] for c in all_cards]
     # Count pairs/trips
     from collections import Counter
     cnt = Counter(ranks)
-    pairs = sum(1 for v in cnt.values() if v >= 2)
     max_count = max(cnt.values())
     if max_count >= 3:
         return 0.85 + (max(ranks) - 10) / 40

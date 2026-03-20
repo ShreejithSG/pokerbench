@@ -1,6 +1,6 @@
 """PokerBench: LLM strategic reasoning benchmark via Texas Hold'em."""
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 from pokerbench.personas import PersonaPlayer, get_persona_names, get_persona_spec
 from pokerbench.random_player import RandomPlayer

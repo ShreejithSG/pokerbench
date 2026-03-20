@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pokerbench"
-version = "0.2.0"
+version = "0.2.1"
 description = "Benchmark for evaluating LLM strategic reasoning via Texas Hold'em"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -44,3 +44,12 @@ pokerbench = "run:main"
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+# load_dotenv() before other imports so .env is loaded first
+"run.py" = ["E402"]
+"scripts/*.py" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

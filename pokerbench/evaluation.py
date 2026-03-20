@@ -14,9 +14,8 @@ Metrics:
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
 
 
 @dataclass
@@ -100,7 +99,6 @@ def aggregate_evals(evals: list[GameEval]) -> dict[str, dict[str, float]]:
     all_players = set()
     for e in evals:
         all_players.update(e.players)
-    total_hands = sum(e.hands_played for e in evals)
     result = {}
     for p in all_players:
         chips = [e.chips_won.get(p, 0) for e in evals]

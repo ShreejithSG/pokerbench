@@ -1,12 +1,21 @@
 # PokerBench
 
+[![CI](https://github.com/ShreejithSG/pokerbench/actions/workflows/ci.yml/badge.svg)](https://github.com/ShreejithSG/pokerbench/actions/workflows/ci.yml)
+
 LLM strategic reasoning benchmark via Texas Hold'em. Built on [llm-poker](https://github.com/strangeloopcanon/llm-poker).
+
+**Ship checklist:** `pip install -e ".[dev]"` → `pytest` + `ruff check run.py pokerbench/ scripts/ tests/` → push (GitHub Actions runs on `main`).
 
 ## Quick Start
 
 ```bash
 # Install
 pip install -e .
+
+# Dev (tests + lint)
+pip install -e ".[dev]"
+pytest
+python -m ruff check run.py pokerbench/ scripts/ tests/
 
 # Run with RandomPlayer (no API needed)
 python run.py --rounds 5

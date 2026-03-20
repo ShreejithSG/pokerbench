@@ -7,7 +7,6 @@ Usage:
   python scripts/evaluate.py traces/game_20260320_104048.json
 """
 
-import json
 import sys
 from pathlib import Path
 
